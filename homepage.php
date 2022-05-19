@@ -18,14 +18,14 @@
 <body>
     <header class="container-fluid">
         <section class="row">
-            <img id="image-logo" class="col-1" src="IMG/logo-with-tekst.png" alt="plant boost logo">
-            <nav id="left" class="col-4 row">
-                <a class="col-2" href="homepage.php">Home</a>
-                <a class="col-3" href="">Evenementen</a>
-                <a class="col-2" href="">Product</a>
-                <a class="col-1" href="">Zoek</a>
-                <a class="col-2" href="">Contacten</a>
-                <a class="col-1" href="">Inloggen</a>
+            <img id="image-logo" class=" col-md-1 col-lg-1" src="IMG/logo-with-tekst.png" alt="plant boost logo">
+            <nav id="left" class="col col-md-7 col-lg-4 row">
+                <a class="col-md-2 col-2" href="homepage.php">Home</a>
+                <a class="col-md-3 col-3" href="">Evenementen</a>
+                <a class="col-md-2 col-2" href="">Product</a>
+                <a class="col-md-1 col-1" href="">Zoek</a>
+                <a class="col-md-2 col-2" href="">Contacten</a>
+                <a class="col-md-2 col-1" href="">Inloggen</a>
             </nav>
         </section>
     </header>
@@ -35,9 +35,9 @@
         </section>
 
         <section id="goup" class="row">
-            <article class="col-4"></article>
-            <article class="col-4"></article>
-            <article class="col-4"></article>
+            <article class="col-1 col-md-1 col-lg-4"></article>
+            <article class="col-1 col-lg-4"></article>
+            <article class="col-1 col-lg-4"></article>
         </section>
     </main>
     <footer>

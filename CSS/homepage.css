@@ -1,6 +1,5 @@
 body {
     background-image: url('../IMG/background.png');
-    background-size: cover;
 }
 
 header {
@@ -8,51 +7,186 @@ header {
     min-height: 7vh;
 }
 
-#left {
-    margin-left: 53vw;
-    margin-top: 2.5vh;
-}
-
-#left>a {
-    text-decoration: none;
-    color: black;
-}
-
-#left>a:nth-child(6) {
-    background-color: black;
-    color: white;
-    width: 5vw;
-    height: 3vh;
-    border-radius: 7px;
-}
-
-main {
-    min-height: 81.9vh;
-}
-
-main>#banner {
-    background-color: white;
-    width: 60vw;
-    height: 30vh;
-    margin-left: 20vw;
-    margin-top: 5vh;
-    border-radius: 25px;
-}
-
-main>section#goup>article {
-    background-color: #DFDE9F;
-    margin-left: 5vw;
-    width: 20vw;
-    height: 40vh;
-    border-radius: 25px;
-}
-
-main>#goup {
-    margin-left: 10vw;
-    margin-top: 5vh;
-}
-
 footer {
     background-color: #A9D792;
     min-height: 5vh;
 }
+
+@media(max-width: 575.9px) {
+    body {
+        background-size: 200vh;
+    }
+    #image-logo {
+        width: 40vw;
+    }
+    #left>a {
+        display: none;
+    }
+    main>#banner {
+        background-color: white;
+        width: 55vw;
+        height: 35vh;
+        margin-left: 20vw;
+        margin-top: 5vh;
+        border-radius: 25px;
+    }
+    main>section#goup>article {
+        background-color: #DFDE9F;
+        margin-left: 5vw;
+        width: 40vw;
+        height: 20vh;
+        border-radius: 25px;
+        margin-top: 5vh;
+    }
+    main>#goup {
+        margin-left: 22vw;
+        margin-top: 5vh;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+}
+@media(min-width:576px) {
+    body {
+        background-size: 400vh;
+    }
+    
+    #image-logo {
+        width: 40vw;
+    }
+    
+    #left>a {
+        display: none;
+    }
+    
+    main>#banner {
+        background-color: white;
+        width: 60vw;
+        height: 30vh;
+        margin-left: 20vw;
+        margin-top: 5vh;
+        border-radius: 25px;
+    }
+    
+    main>section#goup>article {
+        background-color: #DFDE9F;
+        margin-left: 5vw;
+        width: 20vw;
+        height: 40vh;
+        border-radius: 25px;
+    }
+    
+    main>#goup {
+        margin-left: 10vw;
+        margin-top: 5vh;
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media(min-width:768px) {
+    body {
+        background-size: 400vh;
+    }
+    
+    #image-logo {
+        width: 20vw;
+    }
+    
+    #left {
+        margin-left: 20vw;
+        margin-top: 2.5vh;
+    }
+    
+    #left>a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    #left>a:nth-child(6) {
+        background-color: black;
+        color: white;
+        width: 9vw;
+        height: 3vh;
+        border-radius: 7px;
+    }
+    
+    main>#banner {
+        background-color: white;
+        width: 60vw;
+        height: 30vh;
+        margin-left: 20vw;
+        margin-top: 5vh;
+        border-radius: 25px;
+    }
+    
+    main>section#goup>article {
+        background-color: #DFDE9F;
+        margin-left: 5vw;
+        margin-top: 5vh;
+        width: 35vw;
+        height: 20vh;
+        border-radius: 25px;
+    }
+    
+    main>#goup {
+        margin-left: 28vw;
+        margin-top: 5vh;
+    }
+}
+@media(min-width:992px) {
+    body {
+        background-size: cover;
+    }
+    
+    #image-logo {
+        width: 10vw;
+    }
+    
+    #left {
+        margin-left: 53vw;
+        margin-top: 2.5vh;
+    }
+    
+    #left>a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    #left>a:nth-child(6) {
+        background-color: black;
+        color: white;
+        width: 5vw;
+        height: 3vh;
+        border-radius: 7px;
+    }
+    
+    main {
+        min-height: 81.9vh;
+    }
+    
+    main>#banner {
+        background-color: white;
+        width: 60vw;
+        height: 30vh;
+        margin-left: 20vw;
+        margin-top: 5vh;
+        border-radius: 25px;
+    }
+    
+    main>section#goup>article {
+        background-color: #DFDE9F;
+        margin-left: 5vw;
+        width: 20vw;
+        height: 40vh;
+        border-radius: 25px;
+    }
+    
+    main>#goup {
+        margin-left: 10vw;
+        margin-top: 5vh;
+    }
+}
+@media(min-width:1200px) {}
+@media(min-width:1400px) {}
