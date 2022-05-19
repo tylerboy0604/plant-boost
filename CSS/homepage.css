@@ -1,0 +1,58 @@
+body {
+    background-image: url('../IMG/background.png');
+    background-size: cover;
+}
+
+header {
+    background-color: #8AD167;
+    min-height: 7vh;
+}
+
+#left {
+    margin-left: 53vw;
+    margin-top: 2.5vh;
+}
+
+#left>a {
+    text-decoration: none;
+    color: black;
+}
+
+#left>a:nth-child(6) {
+    background-color: black;
+    color: white;
+    width: 5vw;
+    height: 3vh;
+    border-radius: 7px;
+}
+
+main {
+    min-height: 81.9vh;
+}
+
+main>#banner {
+    background-color: white;
+    width: 60vw;
+    height: 30vh;
+    margin-left: 20vw;
+    margin-top: 5vh;
+    border-radius: 25px;
+}
+
+main>section#goup>article {
+    background-color: #DFDE9F;
+    margin-left: 5vw;
+    width: 20vw;
+    height: 40vh;
+    border-radius: 25px;
+}
+
+main>#goup {
+    margin-left: 10vw;
+    margin-top: 5vh;
+}
+
+footer {
+    background-color: #A9D792;
+    min-height: 5vh;
+}
