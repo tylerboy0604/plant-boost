@@ -14,7 +14,7 @@ footer {
 
 @media(max-width: 575.9px) {
     body {
-        background-size: 200vh;
+        background-size: 350vh;
     }
     #image-logo {
         width: 40vw;
@@ -47,7 +47,7 @@ footer {
 }
 
 
-}
+
 @media(min-width:576px) {
     body {
         background-size: 400vh;
@@ -73,13 +73,14 @@ footer {
     main>section#goup>article {
         background-color: #DFDE9F;
         margin-left: 5vw;
-        width: 20vw;
+        margin-top: 5vh;
+        width: 35vw;
         height: 40vh;
         border-radius: 25px;
     }
     
     main>#goup {
-        margin-left: 10vw;
+        margin-left: 27vw;
         margin-top: 5vh;
         display: flex;
         flex-direction: column;
@@ -133,11 +134,16 @@ footer {
     main>#goup {
         margin-left: 28vw;
         margin-top: 5vh;
+        display: flex;
+        flex-direction: row;
     }
 }
 @media(min-width:992px) {
     body {
         background-size: cover;
+    }
+    #left>a {
+        display: block;
     }
     
     #image-logo {
