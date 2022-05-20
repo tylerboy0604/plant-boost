@@ -1,3 +1,32 @@
+<?php
+    include('DB/DataBase_connection.php');
+
+    $sql1 = "SELECT * FROM evenementen";
+
+if($result = $conn-> query($sql)) {
+    while($row = $result-> fetch_row()) {
+        echo $row[1].   "<br>";
+
+    }
+    $result->close();
+
+}
+
+
+
+
+
+    ?>
+
+
+
+
+
+
+
+
+
+
 <!-- Basispagina HTML -->
 <!doctype html>
 <html>
@@ -16,10 +45,11 @@
 </head>
 
 <body>
+
     <header class="container-fluid">
         <section class="row">
             <img id="image-logo" class=" col-md-1 col-lg-1" src="IMG/logo-with-tekst.png" alt="plant boost logo">
-            <nav id="left" class="col col-md-7 col-lg-4 row">
+            <nav id="left" class="col col-md-7 col-lg-5 row">
                 <a class="col-md-2 col-2" href="homepage.php">Home</a>
                 <a class="col-md-3 col-3" href="">Evenementen</a>
                 <a class="col-md-2 col-2" href="">Product</a>
