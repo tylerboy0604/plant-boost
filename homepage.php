@@ -2,8 +2,11 @@
 include('DB/DataBase_connection.php');
 
 
-$sql = "SELECT evenementen.artiest_id,	evenementen.datum, artiesten.naam FROM evenementen LEFT JOIN artiesten ON evenementen.artiest_id = artiesten.artiest_id ORDER BY evenementen.datum ASC LIMIT 3;";
-$events3 = $conn->query($sql);
+$aanbiedingsql = "SELECT 	titel, begindatum, einddatum, omschrijving, afbeelding FROM aanbiedingen ORDER BY begindatum ASC LIMIT 1;"
+$aanbied1 = $conn->query(aanbiedingsql);
+
+$eventsql = "SELECT evenementen.artiest_id,	evenementen.datum, artiesten.naam FROM evenementen LEFT JOIN artiesten ON evenementen.artiest_id = artiesten.artiest_id ORDER BY evenementen.datum ASC LIMIT 3;";
+$events3 = $conn->query($eventsql);
 ?>
 
 
@@ -57,7 +60,9 @@ $events3 = $conn->query($sql);
             while ($evenement = $events3->fetch_assoc()) {
             ?>
                 <article class="col-1 col-md-1 col-lg-4">
-                    <?php echo $evenement['datum'] . "<br>" . $evenement['naam']; ?>
+                    <p>
+                        <?php echo $evenement['datum'] . "<br>" . $evenement['naam']; ?>
+                    </p>
                     <br>
                     <img id="image-event" src="artiesten/<?php echo $evenement['artiest_id'] ?>.png">
                 </article>
@@ -66,8 +71,7 @@ $events3 = $conn->query($sql);
             }
 
             ?>
-            <!-- <article class="col-1 col-lg-4"></article>
-            <article class="col-1 col-lg-4"></article> -->
+
         </section>
     </main>
     <footer>

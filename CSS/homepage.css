@@ -186,7 +186,7 @@ footer {
         background-color: #DFDE9F;
         margin-left: 5vw;
         width: 20vw;
-        height: 40vh;
+        height: 45vh;
         border-radius: 25px;
     }
     
@@ -197,7 +197,14 @@ footer {
     #image-event{
         width: 10vw;
         height: 30vh;
+        border-radius: 25px;
+        margin-left: 4vw;
     }
+    main>section#goup>article>p{
+        text-align: center;
+    }
+
 }
+
 @media(min-width:1200px) {}
 @media(min-width:1400px) {}
