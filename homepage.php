@@ -2,7 +2,7 @@
 include('DB/DataBase_connection.php');
 
 
-$sql = "SELECT evenementen.artiest_id,	evenementen.datum, artiesten.naam FROM evenementen LEFT JOIN artiesten ON evenementen.artiest_id = artiesten.artiest_id LIMIT 3;";
+$sql = "SELECT evenementen.artiest_id,	evenementen.datum, artiesten.naam FROM evenementen LEFT JOIN artiesten ON evenementen.artiest_id = artiesten.artiest_id ORDER BY evenementen.datum ASC LIMIT 3;";
 $events3 = $conn->query($sql);
 ?>
 
@@ -58,7 +58,8 @@ $events3 = $conn->query($sql);
             ?>
                 <article class="col-1 col-md-1 col-lg-4">
                     <?php echo $evenement['datum'] . "<br>" . $evenement['naam']; ?>
-                    <img src="artiesten/<?php echo $evenement['artiest_id'] ?>.png">
+                    <br>
+                    <img id="image-event" src="artiesten/<?php echo $evenement['artiest_id'] ?>.png">
                 </article>
 
             <?php

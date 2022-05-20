@@ -194,6 +194,10 @@ footer {
         margin-left: 10vw;
         margin-top: 5vh;
     }
+    #image-event{
+        width: 10vw;
+        height: 30vh;
+    }
 }
 @media(min-width:1200px) {}
 @media(min-width:1400px) {}
