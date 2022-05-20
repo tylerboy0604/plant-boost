@@ -1,22 +1,10 @@
 <?php
-    include('DB/DataBase_connection.php');
-
-    $sql1 = "SELECT * FROM evenementen";
-
-if($result = $conn-> query($sql)) {
-    while($row = $result-> fetch_row()) {
-        echo $row[1].   "<br>";
-
-    }
-    $result->close();
-
-}
+include('DB/DataBase_connection.php');
 
 
-
-
-
-    ?>
+$sql = "SELECT evenementen.artiest_id,	evenementen.datum, artiesten.naam FROM evenementen LEFT JOIN artiesten ON evenementen.artiest_id = artiesten.artiest_id LIMIT 3;";
+$events3 = $conn->query($sql);
+?>
 
 
 
@@ -65,9 +53,20 @@ if($result = $conn-> query($sql)) {
         </section>
 
         <section id="goup" class="row">
-            <article class="col-1 col-md-1 col-lg-4"></article>
-            <article class="col-1 col-lg-4"></article>
-            <article class="col-1 col-lg-4"></article>
+            <?php
+            while ($evenement = $events3->fetch_assoc()) {
+            ?>
+                <article class="col-1 col-md-1 col-lg-4">
+                    <?php echo $evenement['datum'] . "<br>" . $evenement['naam']; ?>
+                    <img src="artiesten/<?php echo $evenement['artiest_id'] ?>.png">
+                </article>
+
+            <?php
+            }
+
+            ?>
+            <!-- <article class="col-1 col-lg-4"></article>
+            <article class="col-1 col-lg-4"></article> -->
         </section>
     </main>
     <footer>
