@@ -2,8 +2,6 @@
 include('DB/DataBase_connection.php');
 
 
-$aanbiedingsql = "SELECT 	titel, begindatum, einddatum, omschrijving, afbeelding FROM aanbiedingen ORDER BY begindatum ASC LIMIT 1;"
-$aanbied1 = $conn->query(aanbiedingsql);
 
 $eventsql = "SELECT evenementen.artiest_id,	evenementen.datum, artiesten.naam FROM evenementen LEFT JOIN artiesten ON evenementen.artiest_id = artiesten.artiest_id ORDER BY evenementen.datum ASC LIMIT 3;";
 $events3 = $conn->query($eventsql);
