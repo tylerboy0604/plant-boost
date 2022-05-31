@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="language" content="NL">
     <meta name="viewport" content="width=device-width, intial-scale=1">
-    <meta name="description" content="homepage plant-boost">
+    <meta name="description" content="eventpage plant-boost">
     <meta name="author" content="Tyler">
     <meta name="keywords" content='plant-boost'>
     <title>Home</title>
@@ -30,13 +30,11 @@
         </section>
     </header>
     <main class="container-fluid">
+
         <section id="banner">
-
-        </section>
-
-        <section id="goup" class="row">
             <article class="col-1 col-md-1 col-lg-4"></article>
         </section>
+
     </main>
     <footer>
 
