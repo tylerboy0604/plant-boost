@@ -53,11 +53,24 @@ $events3 = $conn->query($eventsql);
 
         </section>
 
-        <section id="banner">
+        <section id="goup" class="row">
+            <?php
+            while ($evenement = $events3->fetch_assoc()) {
+            ?>
+                <article class="col-1 col-md-1 col-lg-4">
+                    <p>
+                        <?php echo $evenement['datum'] . "<br>" . $evenement['naam']; ?>
+                    </p>
+                    <br>
+                    <img id="image-event" src="artiesten/<?php echo $evenement['artiest_id'] ?>.png">
+                </article>
+
+            <?php
+            }
+
+            ?>
 
         </section>
-
-
     </main>
     <footer>
 
