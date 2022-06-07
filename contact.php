@@ -53,22 +53,25 @@ $events3 = $conn->query($eventsql);
 
         </section>
 
-        <section id="goup" class="row">
-            <?php
-            while ($evenement = $events3->fetch_assoc()) {
-            ?>
-                <article class="col-1 col-md-1 col-lg-4">
-                    <p>
-                        <?php echo $evenement['datum'] . "<br>" . $evenement['naam']; ?>
-                    </p>
-                    <br>
-                    <img id="image-event" src="artiesten/<?php echo $evenement['artiest_id'] ?>.png">
-                </article>
+        <section id="banner">
 
-            <?php
-            }
+        <form action="#">
+        <p>voornaam</p><br>
+    <input name="voornaam" type="text" class="round"><br>
+    achternaam<br>
+    <input name="achternaam" type="text" class="round"><br>
 
-            ?>
+    <select name="soort bericht" class="round">
+        <option value="klachten">klachten</option>
+        <option value="vragen">vragen</option>
+        <option value="overig">overig</option>
+    </select> <br>
+
+    <input id="text" class="round" type="text" name="text" id="">
+
+    <input type="submit" class="round" value="submit" name="sturen">
+        </form>
+
 
         </section>
     </main>

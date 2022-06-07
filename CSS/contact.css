@@ -170,15 +170,16 @@ footer {
     }
     
     main {
-        min-height: 81.9vh;
+        min-height: 84.9vh;
+        display: flex;
     }
     
     main>#banner {
-        background-color: white;
-        width: 60vw;
-        height: 30vh;
-        margin-left: 20vw;
-        margin-top: 5vh;
+        background-color: #DFDE9F;
+        width: 42vw;
+        height: 80vh;
+        margin-left: 5vw;
+        margin-top: 2vh;
         border-radius: 25px;
     }
     
@@ -202,6 +203,18 @@ footer {
     }
     main>section#goup>article>p{
         text-align: center;
+    }
+
+    main>input>#text{
+        height:5vh;
+        width: 10vw;
+    }
+
+    .round{
+        border-radius: 10px;
+        border: none;
+        margin-top: 4vh;
+        margin-left: 4vw;
     }
 
 }
