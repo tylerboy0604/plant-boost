@@ -50,7 +50,7 @@ $events3 = $conn->query($eventsql);
     </header>
     <main class="container-fluid">
         <section id="banner">
-
+        <br><p>informatie over ons bedrijf</p>
         </section>
 
         <section id="banner">
@@ -67,7 +67,7 @@ $events3 = $conn->query($eventsql);
         <option value="overig">overig</option>
     </select> <br>
 
-    <input id="text" class="round" type="text" name="text" id="">
+    <input id="text" class="round box" type="text" name="text" id="">
 
     <input type="submit" class="round" value="submit" name="sturen">
         </form>
