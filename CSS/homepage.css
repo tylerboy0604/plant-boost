@@ -1,3 +1,10 @@
+*{
+    cursor: url(../CURSOR/cursor-1.png), auto;
+}
+
+
+
+
 body {
     background-image: url('../IMG/background.png');
 }
@@ -69,7 +76,6 @@ footer {
         margin-top: 5vh;
         border-radius: 25px;
     }
-    
     main>section#goup>article {
         background-color: #DFDE9F;
         margin-left: 5vw;
@@ -121,7 +127,12 @@ footer {
         margin-top: 5vh;
         border-radius: 25px;
     }
-    
+    #bannerimg{
+        width: 60vw;
+        height: 30vh;
+        border-radius: 25px;
+    }
+
     main>section#goup>article {
         background-color: #DFDE9F;
         margin-left: 5vw;
