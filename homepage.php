@@ -13,9 +13,8 @@ $aanbied1 = $conn->query($aanbiedingsql);
 $eventsql = "SELECT evenementen.artiest_id,	evenementen.datum, artiesten.naam 
 FROM evenementen 
 LEFT JOIN artiesten ON evenementen.artiest_id = artiesten.artiest_id 
-WHERE evenementen.datum = NOW()
-ORDER BY evenementen.datum 
-ASC LIMIT 3;";
+WHERE evenementen.datum >= NOW() AND evenementen.datum <= DATE_ADD(NOW(), INTERVAL 7 DAY)
+ORDER BY evenementen.datum;";
 $events3 = $conn->query($eventsql);
 ?>
 
