@@ -13,10 +13,14 @@ $aanbied1 = $conn->query($aanbiedingsql);
 $eventsql = "SELECT evenementen.artiest_id,	evenementen.datum, artiesten.naam 
 FROM evenementen 
 LEFT JOIN artiesten ON evenementen.artiest_id = artiesten.artiest_id 
-WHERE evenementen.datum = NOW()
-ORDER BY evenementen.datum 
-ASC LIMIT 3;";
+WHERE evenementen.datum >= NOW() AND evenementen.datum <= DATE_ADD(NOW(), INTERVAL 7 DAY)
+ORDER BY evenementen.datum;";
 $events3 = $conn->query($eventsql);
+
+$artiestsql = "SELECT artiest_id ,artiesten.naam
+FROM artiesten;";    
+
+$artiest1 = $conn->query($artiestsql);
 ?>
 
 
@@ -61,35 +65,33 @@ $events3 = $conn->query($eventsql);
         </section>
     </header>
     <main class="container-fluid">
-        <?php while($aanbieding = $aanbied1->fetch_assoc()){
-            ?>
-            <section id="banner">
-                <img id="bannerimg" src="aanbiedingen/<?php echo $aanbieding['afbeelding']?>">
+    
+    <section id="goup" class="row">
 
-                </section>
-<?php 
-        }
-?>
-
-
-        <section id="goup" class="row">
             <?php
-            while ($evenement = $events3->fetch_assoc()) {
+            while ($artiest = $artiest1->fetch_assoc()) {
             ?>
                 <article class="col-1 col-md-1 col-lg-4">
                     <p>
-                        <?php echo $evenement['datum'] . "<br>" . $evenement['naam']; ?>
+                        <?php echo $artiest['artiest_id'] . "<br>" . '<a href="#">' . $artiest['naam'] . '</a>';?>
                     </p>
                     <br>
-                    <img id="image-event" src="artiesten/<?php echo $evenement['artiest_id'] ?>.png">
+                    <img id="image-event" src="artiesten/<?php echo $artiest['artiest_id'] ?>.png">
                 </article>
+
+                <article class="col-1 col-md-1 col-lg-4">
+                <p>
+                    <?php echo $evenement['datum'] . "<br>" . $evenement['naam']; ?>
+                </p>
+                <br>
+                <img id="image-event" src="artiesten/<?php echo $evenement['artiest_id'] ?>.png">
+            </article>
 
             <?php
             }
 
-            ?>
+            ?></section>
 
-        </section>
     </main>
     <footer>
 

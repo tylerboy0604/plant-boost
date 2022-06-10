@@ -1,3 +1,7 @@
+*{
+    cursor: url(../CURSOR/cursor-1.png), auto;
+}
+
 body {
     background-image: url('../IMG/background.png');
 }

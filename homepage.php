@@ -40,7 +40,8 @@ $events3 = $conn->query($eventsql);
     <meta name="keywords" content='plant-boost'>
     <title>Home</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="CSS/homepage.css">
 </head>
 
@@ -62,11 +63,11 @@ $events3 = $conn->query($eventsql);
     <main class="container-fluid">
         <?php while($aanbieding = $aanbied1->fetch_assoc()){
             ?>
-            <section id="banner">
-                <img id="bannerimg" src="aanbiedingen/<?php echo $aanbieding['afbeelding']?>">
+        <section id="banner">
+            <img id="bannerimg" src="aanbiedingen/<?php echo $aanbieding['afbeelding']?>">
 
-                </section>
-<?php 
+        </section>
+        <?php 
         }
 ?>
 
@@ -75,13 +76,13 @@ $events3 = $conn->query($eventsql);
             <?php
             while ($evenement = $events3->fetch_assoc()) {
             ?>
-                <article class="col-1 col-md-1 col-lg-4">
-                    <p>
-                        <?php echo $evenement['datum'] . "<br>" . $evenement['naam']; ?>
-                    </p>
-                    <br>
-                    <img id="image-event" src="artiesten/<?php echo $evenement['artiest_id'] ?>.png">
-                </article>
+            <article class="col-1 col-md-1 col-lg-4">
+                <p>
+                    <?php echo $evenement['datum'] . "<br>" . $evenement['naam']; ?>
+                </p>
+                <br>
+                <img id="image-event" src="artiesten/<?php echo $evenement['artiest_id'] ?>.png">
+            </article>
 
             <?php
             }
@@ -96,9 +97,15 @@ $events3 = $conn->query($eventsql);
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous">
+    </script>
 
 </body>
 
