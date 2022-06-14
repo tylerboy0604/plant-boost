@@ -20,13 +20,6 @@ $events3 = $conn->query($eventsql);
 
 
 
-
-
-
-
-
-
-
 <!-- Basispagina HTML -->
 <!doctype html>
 <html>
