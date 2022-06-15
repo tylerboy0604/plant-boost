@@ -168,32 +168,28 @@ footer {
         height: 4vh;
         border-radius: 7px;
     }
-    
-    main {
-        min-height: 81.9vh;
+    main{
+        min-height: 85vh;
+        display: flex;
     }
-    
-    main>#banner {
+
+    main>section#first-box{
         background-color: white;
-        width: 60vw;
-        height: 30vh;
-        margin-left: 20vw;
+        width: 45vw;
+        height: 80vh;
+        border-radius: 25px;
         margin-top: 5vh;
+        margin-bottom: 5vh;
+    }
+    main>section>article#second-box, article#third-box{
+        background-color: white;
+        width: 48vw;
+        height: 37.5vh;
+        margin-top: 5vh;
+        margin-left: 3vw;
         border-radius: 25px;
     }
-    
-    main>section#goup>article {
-        background-color: #DFDE9F;
-        margin-left: 5vw;
-        width: 20vw;
-        height: 40vh;
-        border-radius: 25px;
-    }
-    
-    main>#goup {
-        margin-left: 10vw;
-        margin-top: 5vh;
-    }
+  
 }
 @media(min-width:1200px) {}
 @media(min-width:1400px) {}
