@@ -61,7 +61,7 @@ $artiest1 = $conn->query($artiestsql);
             ?>
                 <article class="col-1 col-md-1 col-lg-4">
                     <p>
-                        <?php echo $artiest['artiest_id'] . "<br>" . '<a href="#">' . $artiest['naam'] . '</a>';?>
+                        <?php echo $artiest['artiest_id'] . "<br>" . '<a href="Details.php">' . $artiest['naam'] . '</a>';?>
                     </p>
                     <br>
                     <img id="image-event" src="artiesten/<?php echo $artiest['artiest_id'] ?>.png">
@@ -75,10 +75,10 @@ $artiest1 = $conn->query($artiestsql);
             ?>
                 <article class="col-1 col-md-1 col-lg-4">
                 <p>
-                    <?php echo $evenement['datum']?> <br> <?php echo $evenement['evenement_id'];?>
+                    <?php echo $evenement['datum']?> <br> <?php echo '<a href="Details.php">' . $evenement['evenement_id'] . '</a>';?>
                 </p>
                 <br>
-                <img id="image-event" src="EVENT/<?php echo $evenement['evenement_id'] ?>.png">
+                <img id="image-event" src="EVENT/<?php echo  $evenement['evenement_id'] ?>.png">
             </article>
 
             <?php
