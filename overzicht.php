@@ -1,20 +1,8 @@
 <?php
 include('DB/DataBase_connection.php');
 
-
-$aanbiedingsql = "SELECT 	titel, begindatum, einddatum, omschrijving, afbeelding
-FROM aanbiedingen
-WHERE begindatum <= NOW() AND einddatum >= NOW()
-ORDER BY begindatum ASC
-LIMIT 1;";
-$aanbied1 = $conn->query($aanbiedingsql);
-
-
-$eventsql = "SELECT evenementen.artiest_id,	evenementen.datum, artiesten.naam 
-FROM evenementen 
-LEFT JOIN artiesten ON evenementen.artiest_id = artiesten.artiest_id 
-WHERE evenementen.datum >= NOW() AND evenementen.datum <= DATE_ADD(NOW(), INTERVAL 7 DAY)
-ORDER BY evenementen.datum;";
+$eventsql = "SELECT evenement_id, datum 
+FROM evenementen;";
 $events3 = $conn->query($eventsql);
 
 $artiestsql = "SELECT artiest_id ,artiesten.naam
@@ -78,20 +66,25 @@ $artiest1 = $conn->query($artiestsql);
                     <br>
                     <img id="image-event" src="artiesten/<?php echo $artiest['artiest_id'] ?>.png">
                 </article>
-
+            <?php
+            }
+            ?>
+            
+            <?php
+            while ($evenement = $events3->fetch_assoc()) {
+            ?>
                 <article class="col-1 col-md-1 col-lg-4">
                 <p>
-                    <?php echo $evenement['datum'] . "<br>" . $evenement['naam']; ?>
+                    <?php echo $evenement['datum']?> <br> <?php echo $evenement['evenement_id'];?>
                 </p>
                 <br>
-                <img id="image-event" src="artiesten/<?php echo $evenement['artiest_id'] ?>.png">
+                <img id="image-event" src="EVENT/<?php echo $evenement['evenement_id'] ?>.png">
             </article>
 
             <?php
             }
 
             ?></section>
-
     </main>
     <footer>
 
