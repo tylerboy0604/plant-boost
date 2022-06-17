@@ -1,7 +1,7 @@
 <?php
 include('DB/DataBase_connection.php');
 
-$eventsql = "SELECT evenement_id, datum FROM evenementen LIMIT 3";
+$eventsql = "SELECT evenement_id, datum FROM evenementen";
 $events3 = $conn->query($eventsql);
 
 $artiestsql = "SELECT artiest_id ,artiesten.naam
@@ -52,20 +52,7 @@ $artiest1 = $conn->query($artiestsql);
             </nav>
         </section>
     </header>
-    <main class="container-fluid">
-    <form>
-     <select class="form-control select-box" name="">
-                 <option value="make-any">Make (Any)</option>
-                 <?php while($make = $filterres->fetch(PDO::FETCH_OBJ))
-                 {
-                 echo '
-                 <option value="">'.$make->make.'</option>
-                 ';
-                 } ?>
-     </select>
-     <button href="#" class="btn btn-block car-search-button btn-lg btn-success"><span class="glyphicon car-search-g glyphicon-search"></span> Search cars 
-     </button>
-     </form>
+
 
     <section id="goup" class="row">
 
