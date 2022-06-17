@@ -1,14 +1,14 @@
 <?php
 include('DB/DataBase_connection.php');
 
-$eventsql = "SELECT evenement_id, datum 
-FROM evenementen;";
+$eventsql = "SELECT evenement_id, datum FROM evenementen LIMIT 3";
 $events3 = $conn->query($eventsql);
 
 $artiestsql = "SELECT artiest_id ,artiesten.naam
 FROM artiesten;";    
 
 $artiest1 = $conn->query($artiestsql);
+
 ?>
 
 
@@ -53,8 +53,17 @@ $artiest1 = $conn->query($artiestsql);
         </section>
     </header>
     <main class="container-fluid">
-    
     <section id="goup" class="row">
+
+        <form action="#">
+            <select name="filter" id="filter">
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                
+            </select>
+            <input type="button" value="filteren">
+        </form>
 
             <?php
             while ($artiest = $artiest1->fetch_assoc()) {
@@ -75,7 +84,8 @@ $artiest1 = $conn->query($artiestsql);
             ?>
                 <article class="col-1 col-md-1 col-lg-4">
                 <p>
-                    <?php echo $evenement['datum']?> <br> <?php echo '<a href="Details.php">' . $evenement['evenement_id'] . '</a>';?>
+                    <?php echo $evenement['datum']?> <br> 
+                    <a href="Details.php?id=<?php echo $evenement['evenement_id'];?>"><?php echo $evenement['evenement_id'];?></a>
                 </p>
                 <br>
                 <img id="image-event" src="EVENT/<?php echo  $evenement['evenement_id'] ?>.png">
