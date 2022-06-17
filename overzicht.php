@@ -53,17 +53,23 @@ $artiest1 = $conn->query($artiestsql);
         </section>
     </header>
     <main class="container-fluid">
+    <form>
+     <select class="form-control select-box" name="">
+                 <option value="make-any">Make (Any)</option>
+                 <?php while($make = $filterres->fetch(PDO::FETCH_OBJ))
+                 {
+                 echo '
+                 <option value="">'.$make->make.'</option>
+                 ';
+                 } ?>
+     </select>
+     <button href="#" class="btn btn-block car-search-button btn-lg btn-success"><span class="glyphicon car-search-g glyphicon-search"></span> Search cars 
+     </button>
+     </form>
+
     <section id="goup" class="row">
 
-        <form action="#">
-            <select name="filter" id="filter">
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                
-            </select>
-            <input type="button" value="filteren">
-        </form>
+
 
             <?php
             while ($artiest = $artiest1->fetch_assoc()) {
@@ -85,7 +91,7 @@ $artiest1 = $conn->query($artiestsql);
                 <article class="col-1 col-md-1 col-lg-4">
                 <p>
                     <?php echo $evenement['datum']?> <br> 
-                    <a href="Details.php?id=<?php echo $evenement['evenement_id'];?>"><?php echo $evenement['evenement_id'];?></a>
+                    <a href="eventdetails.php?id=<?php echo $evenement['evenement_id'];?>"><?php echo $evenement['evenement_id'];?></a>
                 </p>
                 <br>
                 <img id="image-event" src="EVENT/<?php echo  $evenement['evenement_id'] ?>.png">
