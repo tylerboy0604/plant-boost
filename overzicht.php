@@ -8,7 +8,6 @@ $artiestsql = "SELECT artiest_id ,artiesten.naam
 FROM artiesten;";    
 
 $artiest1 = $conn->query($artiestsql);
-
 ?>
 
 
@@ -40,6 +39,8 @@ $artiest1 = $conn->query($artiestsql);
 <body>
 
     <header class="container-fluid">
+    
+
         <section class="row">
             <img id="image-logo" class=" col-md-1 col-lg-1" src="IMG/logo-with-tekst.png" alt="plant boost logo">
             <nav id="left" class="col col-md-7 col-lg-5 row">
@@ -52,18 +53,16 @@ $artiest1 = $conn->query($artiestsql);
             </nav>
         </section>
     </header>
-
-
+    <main class="container-fluid">
+    
     <section id="goup" class="row">
-
-
 
             <?php
             while ($artiest = $artiest1->fetch_assoc()) {
             ?>
                 <article class="col-1 col-md-1 col-lg-4">
                     <p>
-                        <?php echo $artiest['artiest_id'] . "<br>" . '<a href="Details.php">' . $artiest['naam'] . '</a>';?>
+                        <a href=artiestdetails.php?id=<?php echo $artiest['artiest_id'];?>"><?php echo $artiest['naam'];?></a> 
                     </p>
                     <br>
                     <img id="image-event" src="artiesten/<?php echo $artiest['artiest_id'] ?>.png">

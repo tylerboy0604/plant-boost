@@ -1,8 +1,10 @@
 <?php
 include('DB/DataBase_connection.php');
 
-$eventsql = "SELECT evenementen.artiest_id,	evenementen.datum, artiesten.naam FROM evenementen LEFT JOIN artiesten ON evenementen.artiest_id = artiesten.artiest_id WHERE evenementen.evenement_id=" . $_GET['id'] . " ORDER BY evenementen.datum ASC LIMIT 3;";
-$events  = $conn->query($eventsql);
+$eventsql = "SELECT evenementen.artiest_id,	evenementen.datum, artiesten.naam FROM evenementen LEFT JOIN artiesten ON evenementen.artiest_id = artiesten.artiest_id ORDER BY evenementen.datum ASC LIMIT 3;";
+$events3 = $conn->query($eventsql);
+
+$id= $_GET['id'];
 ?>
 
 <!doctype html>
@@ -17,7 +19,8 @@ $events  = $conn->query($eventsql);
     <meta name="keywords" content='plant-boost'>
     <title>Home</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="CSS/details.css">
 </head>
 
@@ -37,23 +40,13 @@ $events  = $conn->query($eventsql);
         </section>
     </header>
     <main class="container-fluid">
-        <section id="first-box">        
-        <?php
-        for ($number = 1; $number <= 10; $number++) {
-        echo $number;}
-        ?>
-
-</section>
-
+        <section id="first-box">
+        <img id="image-event" src="EVENT/<?php echo  $_GET['id'] ?>.png"> 
+        </section>
         <section>
             <article id="second-box"></article>
 
-            <article id="third-box">
-                <p>
-                kom naar het aangegeven adress en koop uw kaartje <br>
-                
-                </p>
-            </article>
+            <article id="third-box"></article>
         </section>
     </main>
     <footer>
