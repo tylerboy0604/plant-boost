@@ -4,6 +4,8 @@ include('DB/DataBase_connection.php');
 $artiestsql = "SELECT artiest_id, naam, statement FROM artiesten;";
 $artiest1 = $conn->query($artiestsql);
 
+$eventsql = "SELECT evenement_id, datum FROM evenementen;";
+$event1 = $conn->query($eventsql);
 $id= $_GET['id'];
 
 
@@ -34,8 +36,8 @@ $id= $_GET['id'];
             <img id="image-logo" class=" col-md-1 col-lg-1" src="IMG/logo-with-tekst.png" alt="plant boost logo">
             <nav id="left" class="col col-md-7 col-lg-5 row">
                 <a class="col-md-2 col-2" href="homepage.php">Home</a>
-                <a class="col-md-2 col-2" href="">Product</a>
-                <a class="col-md-1 col-1" href="overizcht.php">overzicht</a>
+                <a class="col-md-2 col-2" href="product.php">Product</a>
+                <a class="col-md-1 col-1" href="overzicht.php">overzicht</a>
                 <a class="col-md-2 col-2" href="contact.php">Contacten</a>
                 <a class="col-md-2 col-1" href=login.php">Inloggen</a>
             </nav>
@@ -48,14 +50,12 @@ $id= $_GET['id'];
         
         <section>
         <?php
-            while ($artiest = $artiest1->fetch_assoc()) {
+            $artiest = $artiest1->fetch_assoc()
             ?>
-            <article class="artiest-box" id="second-box">deze artiest speelt bij: </article>
+            <article class="artiest-box" id="second-box">deze artiest speelt bij: <?= echo  ?></article>
 
             <article class="artiest-box" id="third-box"> meest bekende statement van dit persoon: <?php echo $artiest['statement'] ?></article>
-            <?php
-            }
-            ?>
+
         </section>
     </main>
     <footer>

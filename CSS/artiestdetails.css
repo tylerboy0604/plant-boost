@@ -29,6 +29,7 @@ footer {
         margin-left: 20vw;
         margin-top: 5vh;
         border-radius: 25px;
+        text-align: center;
     }
     main>section#goup>article {
         background-color: #DFDE9F;
@@ -194,7 +195,7 @@ footer {
         height: 37.5vh;
         margin-top: 5vh;
         margin-left: 3vw;
-        border-radius: 25px;
+        border-radius: 4px;
     }
   
 }
