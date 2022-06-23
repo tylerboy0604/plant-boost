@@ -62,7 +62,7 @@ $artiest1 = $conn->query($artiestsql);
             ?>
                 <article class="col-1 col-md-1 col-lg-4">
                     <p>
-                        <a href=artiestdetails.php?id=<?php echo $artiest['artiest_id'];?>"><?php echo $artiest['naam'];?></a> 
+                        <a href=artiestDetails.php?id=<?php echo $artiest['artiest_id'];?>><?php echo $artiest['naam'];?></a> 
                     </p>
                     <br>
                     <img id="image-event" src="artiesten/<?php echo $artiest['artiest_id'] ?>.png">

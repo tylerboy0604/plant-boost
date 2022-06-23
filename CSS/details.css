@@ -149,6 +149,12 @@ footer {
     #image-logo {
         width: 10vw;
     }
+
+    #artiest{
+        height: 80vh;
+        width: auto;
+        border-radius: 25px;
+    }
     
     #left {
         margin-left: 40vw;
@@ -175,15 +181,16 @@ footer {
 
     main>section#first-box{
         background-color: white;
-        width: 45vw;
+        width: 27vw;
         height: 80vh;
         border-radius: 25px;
         margin-top: 5vh;
         margin-bottom: 5vh;
+        text-align:center;
     }
     main>section>article#second-box, article#third-box{
         background-color: white;
-        width: 48vw;
+        width: 32vw;
         height: 37.5vh;
         margin-top: 5vh;
         margin-left: 3vw;

@@ -1,10 +1,12 @@
 <?php
 include('DB/DataBase_connection.php');
 
-$eventsql = "SELECT evenementen.artiest_id,	evenementen.datum, artiesten.naam FROM evenementen LEFT JOIN artiesten ON evenementen.artiest_id = artiesten.artiest_id ORDER BY evenementen.datum ASC LIMIT 3;";
-$events3 = $conn->query($eventsql);
+$artiestsql = "SELECT artiest_id, naam, artiesten.statement FROM artiesten;";
+$artiest = $conn->query($artiestsql);
 
 $id= $_GET['id'];
+
+
 ?>
 
 <!doctype html>
@@ -13,15 +15,16 @@ $id= $_GET['id'];
 <head>
     <meta charset="utf-8">
     <meta http-equiv="language" content="NL">
-    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="eventpage plant-boost">
     <meta name="author" content="Tyler">
     <meta name="keywords" content='plant-boost'>
     <title>Home</title>
-
+   
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="CSS/details.css">
+        <link rel="stylesheet" type="text/css" href="CSS/details.css">
+   
 </head>
 
 <body>
@@ -41,12 +44,13 @@ $id= $_GET['id'];
     </header>
     <main class="container-fluid">
         <section id="first-box">
-        <img id="artiest" src="EVENT/<?php echo  $_GET['id'] ?>.png"> 
+        <img id="artiest" src="artiesten/<?php echo  $_GET['id'] ?>.png"> 
         </section>
+        
         <section>
             <article id="second-box"></article>
 
-            <article id="third-box"></article>
+            <article id="third-box"> meest bekende statement van dit persoon: <?php echo $artiest['artiesten.statement'] ?></article>
         </section>
     </main>
     <footer>
