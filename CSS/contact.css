@@ -149,16 +149,19 @@ footer {
   }
 
   #left {
-    margin-left: 40vw;
     margin-top: 2.5vh;
+    display: flex;
+    flex: auto;
+    
   }
 
   #left > a {
     text-decoration: none;
     color: black;
+    margin-left: 1vw;
   }
 
-  #left > a:nth-child(6) {
+  #left > a:nth-child(5) {
     background-color: black;
     color: white;
     width: 6vw;
