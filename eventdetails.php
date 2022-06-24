@@ -21,7 +21,7 @@ $id= $_GET['id'];
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="CSS/details.css">
+    <link rel="stylesheet" type="text/css" href="CSS/eventdetails.css">
 </head>
 
 <body>
@@ -31,11 +31,10 @@ $id= $_GET['id'];
             <img id="image-logo" class=" col-md-1 col-lg-1" src="IMG/logo-with-tekst.png" alt="plant boost logo">
             <nav id="left" class="col col-md-7 col-lg-5 row">
                 <a class="col-md-2 col-2" href="homepage.php">Home</a>
-                <a class="col-md-3 col-3" href="eventpage.php">Evenementen</a>
-                <a class="col-md-2 col-2" href="">Product</a>
-                <a class="col-md-1 col-1" href="">Zoek</a>
-                <a class="col-md-2 col-2" href="">Contacten</a>
-                <a class="col-md-2 col-1" href="">Inloggen</a>
+                <a class="col-md-2 col-2" href="product.php">Product</a>
+                <a class="col-md-1 col-1" href="overzicht.php">overzicht</a>
+                <a class="col-md-2 col-2" href="contact.php">Contacten</a>
+                <a class="col-md-2 col-1" href=login.php">Inloggen</a>
             </nav>
         </section>
     </header>

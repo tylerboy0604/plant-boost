@@ -52,7 +52,7 @@ $id= $_GET['id'];
         <?php
             $artiest = $artiest1->fetch_assoc()
             ?>
-            <article class="artiest-box" id="second-box">deze artiest speelt bij: <?= echo  ?></article>
+            <article class="artiest-box" id="second-box">deze artiest speelt bij:</article>
 
             <article class="artiest-box" id="third-box"> meest bekende statement van dit persoon: <?php echo $artiest['statement'] ?></article>
 

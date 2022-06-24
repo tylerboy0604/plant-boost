@@ -165,7 +165,7 @@ footer {
 
     }
     
-    #left>a:nth-child(6) {
+    #left>a:nth-child(5) {
         background-color: black;
         color: white;
         width: 6vw;
@@ -206,6 +206,11 @@ footer {
     }
     main>section#goup>article>p{
         text-align: center;
+    }
+
+    nav{
+        display: flex;
+        flex: auto;
     }
 
 }

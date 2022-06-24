@@ -40,12 +40,13 @@ $events3 = $conn->query($eventsql);
         <section class="row">
             <img id="image-logo" class=" col-md-1 col-lg-1" src="IMG/logo-with-tekst.png" alt="plant boost logo">
             <nav id="left" class="col col-md-7 col-lg-5 row">
+            <nav id="left" class="col col-md-7 col-lg-5 row">
                 <a class="col-md-2 col-2" href="homepage.php">Home</a>
-                <a class="col-md-3 col-3" href="eventpage.php">Evenementen</a>
                 <a class="col-md-2 col-2" href="product.php">Product</a>
-                <a class="col-md-1 col-1" href="overzicht.php">Zoek</a>
+                <a class="col-md-1 col-1" href="overzicht.php">overzicht</a>
                 <a class="col-md-2 col-2" href="contact.php">Contacten</a>
-                <a class="col-md-2 col-1" href="">Inloggen</a>
+                <a class="col-md-2 col-1" href=login.php">Inloggen</a>
+            </nav>
             </nav>
         </section>
     </header>
