@@ -45,7 +45,7 @@ $events3 = $conn->query($eventsql);
                 <a class="col-md-2 col-2" href="product.php">Product</a>
                 <a class="col-md-1 col-1" href="overzicht.php">overzicht</a>
                 <a class="col-md-2 col-2" href="contact.php">Contacten</a>
-                <a class="col-md-2 col-1" href=login.php">Inloggen</a>
+                <a class="col-md-2 col-1" href=logIn.php">Inloggen</a>
             </nav>
             </nav>
         </section>
@@ -61,7 +61,7 @@ $events3 = $conn->query($eventsql);
             <form action="#">
                 <p>voornaam</p><br>
                 <input name="voornaam" type="text" class="round"><br>
-                achternaam<br>
+                <p>achternaam</p><br>
                 <input name="achternaam" type="text" class="round"><br>
 
                 <select name="soort bericht" class="round">

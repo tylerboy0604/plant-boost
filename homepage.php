@@ -2,7 +2,7 @@
 include('DB/DataBase_connection.php');
 
 
-$aanbiedingsql = "SELECT 	titel, begindatum, einddatum, omschrijving, afbeelding
+$aanbiedingsql = "SELECT titel, begindatum, einddatum, omschrijving, afbeelding
 FROM aanbiedingen
 WHERE begindatum <= NOW() AND einddatum >= NOW()
 ORDER BY begindatum ASC
@@ -49,13 +49,13 @@ $events3 = $conn->query($eventsql);
 
     <header class="container-fluid">
         <section class="row">
-            <img id="image-logo" class=" col-md-1 col-lg-1" src="IMG/logo-with-tekst.png" alt="plant boost logo">
+            <img id="image-logo" class="col-md-1 col-lg-1" src="IMG/logo-with-tekst.png" alt="plant boost logo">
             <nav id="left" class="col col-md-7 col-lg-5 row">
                 <a class="col-md-2 col-2" href="homepage.php">Home</a>
                 <a class="col-md-2 col-2" href="product.php">Product</a>
                 <a class="col-md-1 col-1" href="overzicht.php">overzicht</a>
                 <a class="col-md-2 col-2" href="contact.php">Contacten</a>
-                <a class="col-md-2 col-1" href=login.php">Inloggen</a>
+                <a class="col-md-2 col-1" href=logIn.php">Inloggen</a>
             </nav>
         </section>
     </header>

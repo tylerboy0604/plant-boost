@@ -89,6 +89,12 @@ footer {
     background-size: 400vh;
   }
 
+  p {
+    margin-top: 4vh;
+margin-bottom: -2rem;
+margin-left: 4vw;
+  }
+
   #image-logo {
     width: 20vw;
   }
@@ -149,7 +155,7 @@ footer {
   }
 
   #left {
-    margin-top: 2.5vh;
+    margin-top: 1vh;
     display: flex;
     flex: auto;
     
@@ -221,6 +227,11 @@ footer {
     min-height: 32vh;
     min-width: 33vw;
   }
+
+  nav{
+    display: flex;
+    flex: auto;
+}
 }
 
 @media (min-width: 1200px) {

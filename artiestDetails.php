@@ -39,7 +39,7 @@ $id= $_GET['id'];
                 <a class="col-md-2 col-2" href="product.php">Product</a>
                 <a class="col-md-1 col-1" href="overzicht.php">overzicht</a>
                 <a class="col-md-2 col-2" href="contact.php">Contacten</a>
-                <a class="col-md-2 col-1" href=login.php">Inloggen</a>
+                <a class="col-md-2 col-1" href=logIn.php">Inloggen</a>
             </nav>
         </section>
     </header>

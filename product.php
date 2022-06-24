@@ -32,7 +32,7 @@
 
 
     <main>
-        <section></section>
+        <section><img src="IMG/" alt=""></section>
         <section>
             <section id="box1">
                 <article></article>

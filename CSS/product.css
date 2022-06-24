@@ -222,6 +222,11 @@ footer {
         display: flex;
     }
 
+    nav{
+        display: flex;
+        flex: auto;
+    }
+
 
 }
 
