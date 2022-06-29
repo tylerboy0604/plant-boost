@@ -5,8 +5,11 @@
 
 
 
+
+
 body {
     background-image: url('../IMG/background.png');
+    overflow-x: hidden;
 }
 
 header {
@@ -163,16 +166,20 @@ footer {
     
     #left {
         margin-left: 40vw;
-        margin-top: 2.5vh;
+margin-top: 2.5vh;
+display: flex;
+flex: auto;
+
     }
     
     #left>a {
         text-decoration: none;
         color: black;
+        margin-left: 1vw;
 
     }
     
-    #left>a:nth-child(6) {
+    #left>a:nth-child(5) {
         background-color: black;
         color: white;
         width: 6vw;
@@ -180,39 +187,35 @@ footer {
         border-radius: 7px;
     }
     
-    main {
-        min-height: 81.9vh;
+
+    main>section{
+        width: 50%;
+        margin: 0 auto;
     }
     
-    main>#banner {
-        background-color: white;
-        width: 60vw;
-        height: 30vh;
-        margin-left: 20vw;
-        margin-top: 5vh;
-        border-radius: 25px;
+main>section>section>p{
+    background-color: #8AD167;
+    width: 190px;
+    color:white;
+    border-radius: 10px;
+}
+
+    main>section>section>p.inputlabel{
+        color: white;
+        background-color: #8AD167;
+        width: 100px;
     }
-    
-    main>section#goup>article {
-        background-color: #DFDE9F;
-        margin-left: 5vw;
-        width: 20vw;
-        height: 45vh;
-        border-radius: 25px;
+
+    main>#background{
+        margin-top: 10vh;
+        background-color: #A9D792;
+        width: 500px;
     }
-    
-    main>#goup {
-        margin-left: 10vw;
-        margin-top: 5vh;
-    }
-    #image-event{
-        width: 10vw;
-        height: 30vh;
-        border-radius: 25px;
-        margin-left: 4vw;
-    }
-    main>section#goup>article>p{
-        text-align: center;
+    .design{
+        border: 3px solid green;
+        width: 300px;
+        height: 40px;
+        border-radius: 10px;
     }
 
 }
